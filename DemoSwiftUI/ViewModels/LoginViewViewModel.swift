@@ -14,6 +14,9 @@ final class LoginViewViewModel: ObservableObject {
         }
     }
     
+    @Published var isToggle: Bool = false
+    
+    
     init(name: String) {
         self.name = name
     }

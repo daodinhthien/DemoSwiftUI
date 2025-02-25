@@ -20,4 +20,8 @@ final class ListViewViewModel: ObservableObject {
             items.append(item)
         }
     }
+    
+    func addData(item: ItemModel) {
+        items.append(item)
+    }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    var mainViewModel: MainViewViewModel
+    @ObservedObject var mainViewModel: MainViewViewModel
     @ObservedObject var loginViewModel = LoginViewViewModel(name: "thiện")
     var body: some View {
         VStack(content: {
@@ -20,6 +20,12 @@ struct LoginView: View {
             Text(loginViewModel.name)
                 .font(.largeTitle)
                 .foregroundColor(.blue)
+            Toggle(isOn: $mainViewModel.isLogin){
+                Text("Login")
+                    .font(.largeTitle)
+                    .foregroundColor(.red)
+            }
+            .padding()
             CustomButton(bgColor: .blue, text: "Test", textColor: .white) {
                 mainViewModel.toggleLogin()
             }

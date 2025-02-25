@@ -17,4 +17,5 @@ final class MainViewViewModel: ObservableObject {
     func toggleLogin() {
         isLogin = !isLogin
     }
+    
 }

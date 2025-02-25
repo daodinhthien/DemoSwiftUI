@@ -42,7 +42,7 @@ struct ListItemView: View {
 
                 })
                 .sheet(isPresented: $vm.isShowNewItem, content: {
-                    AddItemView(isShowAddItem: $vm.isShowNewItem)
+                    AddItemView(listVM: vm, isShowAddItem: $vm.isShowNewItem)
                 })
             }
             .navigationTitle("List Item")

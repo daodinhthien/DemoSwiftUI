@@ -13,7 +13,8 @@ final class AddItemViewViewModel: ObservableObject {
     init() {
     }
     
-    func save() {
-        
+    func getSaveModel() -> ItemModel {
+        let item = ItemModel(id: UUID().uuidString, description: description, time: dueDate.timeIntervalSince1970)
+        return item
     }
 }
